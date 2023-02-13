@@ -50,8 +50,8 @@
     "watch": "tsc -c"
   },
   "devDependencies": {
-    "@commitlint/cli": "17.4.2",
-    "@commitlint/config-conventional": "17.4.2",
+    "@commitlint/cli": "17.4.3",
+    "@commitlint/config-conventional": "17.4.3",
     "@faker-js/faker": "7.6.0",
     "@release-it/conventional-changelog": "5.1.1",
     "@types/archiver": "5.3.1",
@@ -61,7 +61,7 @@
     "@vitest/coverage-c8": "0.28.4",
     "barrelsby": "2.5.1",
     "del-cli": "5.0.0",
-    "eslint": "8.33.0",
+    "eslint": "8.34.0",
     "fishery": "2.2.2",
     "husky": "8.0.3",
     "lint-staged": "13.1.1",
@@ -82,7 +82,7 @@
     "commander": "10.0.0",
     "cosmiconfig": "8.0.0",
     "del": "7.0.0",
-    "execa": "6.1.0",
+    "execa": "7.0.0",
     "listr2": "5.0.7",
     "make-dir": "3.1.0",
     "pkg-dir": "7.0.0",
