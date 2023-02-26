@@ -1,4 +1,4 @@
-import { Package } from '../adapter/pkg/package.js';
+import { Package } from '../vendor/pkg/package.js';
 
 export class Release {
   constructor(private readonly pkg: Package) {}

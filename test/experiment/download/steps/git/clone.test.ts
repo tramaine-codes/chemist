@@ -1,11 +1,11 @@
 import * as td from 'testdouble';
 import { afterEach, expect, test } from 'vitest';
-import { Package } from '../../../../../src/adapter/pkg/package.js';
-import { Is } from '../../../../../src/adapter/type/is.js';
 import { Clone } from '../../../../../src/experiment/download/steps/git/clone';
 import { GitGateway } from '../../../../../src/experiment/download/steps/git/git-gateway';
 import { Material } from '../../../../../src/lab/cabinet/material/material.js';
 import { Mixer } from '../../../../../src/lab/cabinet/mixer.js';
+import { Package } from '../../../../../src/vendor/pkg/package.js';
+import { Is } from '../../../../../src/vendor/type/is.js';
 import { substanceFactory } from '../../../../factory/substance.js';
 
 const cli = substanceFactory.cli.build();

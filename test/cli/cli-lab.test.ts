@@ -1,8 +1,8 @@
 import * as td from 'testdouble';
 import { afterEach, expect, test } from 'vitest';
-import { Runner } from '../../src/adapter/runner/runner.js';
 import { CliLab } from '../../src/cli/cli-lab.js';
 import { Experiment } from '../../src/experiment/experiment.js';
+import { Runner } from '../../src/vendor/runner/runner.js';
 
 afterEach(() => {
   td.reset();

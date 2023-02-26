@@ -1,10 +1,10 @@
 import * as td from 'testdouble';
 import { afterEach, expect, test } from 'vitest';
-import { Package } from '../../../../../src/adapter/pkg/package.js';
-import { Process } from '../../../../../src/adapter/process/process.js';
-import { Is } from '../../../../../src/adapter/type/is.js';
 import { InstallProdDeps } from '../../../../../src/experiment/synthesis/steps/npm/install-prod-deps.js';
 import { Material } from '../../../../../src/lab/cabinet/material/material.js';
+import { Package } from '../../../../../src/vendor/pkg/package.js';
+import { Process } from '../../../../../src/vendor/process/process.js';
+import { Is } from '../../../../../src/vendor/type/is.js';
 import { compoundFactory } from '../../../../factory/compound.js';
 
 const pkg = td.object<Package>();

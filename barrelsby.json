@@ -2,10 +2,10 @@
   "delete": true,
   "directory": ["src"],
   "include": [
-    "src/lab/chemist.ts",
-    "src/experiment/variables.ts",
     "src/cli/cli-lab.ts",
     "src/cli/release.ts",
-    "src/cli/title.ts"
+    "src/cli/title.ts",
+    "src/experiment/variables.ts",
+    "src/lab/chemist.ts"
   ]
 }

@@ -1,6 +1,6 @@
 import { Variables } from '../../experiment/variables.js';
-import { Loader } from '../../adapter/config/loader.js';
-import { Is } from '../../adapter/type/is.js';
+import { Loader } from '../../vendor/config/loader.js';
+import { Is } from '../../vendor/type/is.js';
 import { CliSubstance, ConfigSubstance } from './material/substance.js';
 
 export class Cabinet {

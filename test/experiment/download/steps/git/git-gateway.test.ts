@@ -1,7 +1,7 @@
 import * as td from 'testdouble';
 import { afterEach, test } from 'vitest';
-import { Process } from '../../../../../src/adapter/process/process.js';
 import { GitGateway } from '../../../../../src/experiment/download/steps/git/git-gateway.js';
+import { Process } from '../../../../../src/vendor/process/process.js';
 
 const process = td.object<Process>();
 

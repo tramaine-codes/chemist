@@ -1,6 +1,6 @@
 import { Experiment } from '../experiment/experiment.js';
 import { Lab } from '../lab/lab.js';
-import { Runner } from '../adapter/runner/runner.js';
+import { Runner } from '../vendor/runner/runner.js';
 
 export class CliLab implements Lab {
   constructor(private readonly runner: Runner) {}

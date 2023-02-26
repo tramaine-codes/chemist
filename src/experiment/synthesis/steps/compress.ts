@@ -1,6 +1,6 @@
 import { Material } from '../../../lab/cabinet/material/material.js';
-import { FileSystem } from '../../../adapter/file-system/file-system.js';
-import { Package } from '../../../adapter/pkg/package.js';
+import { FileSystem } from '../../../vendor/file-system/file-system.js';
+import { Package } from '../../../vendor/pkg/package.js';
 import { Step } from '../../experiment.js';
 
 export class Compress implements Step {

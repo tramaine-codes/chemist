@@ -1,5 +1,5 @@
 import { Material } from '../../../../lab/cabinet/material/material.js';
-import { Process } from '../../../../adapter/process/process.js';
+import { Process } from '../../../../vendor/process/process.js';
 import { Step } from '../../../experiment.js';
 
 export class Build implements Step {

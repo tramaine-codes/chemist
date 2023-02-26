@@ -1,9 +1,9 @@
 import * as td from 'testdouble';
 import { afterEach, expect, test } from 'vitest';
-import { Loader } from '../../../src/adapter/config/loader.js';
-import { Is } from '../../../src/adapter/type/is.js';
 import { Cabinet } from '../../../src/lab/cabinet/cabinet.js';
 import { ConfigSubstance } from '../../../src/lab/cabinet/material/substance.js';
+import { Loader } from '../../../src/vendor/config/loader.js';
+import { Is } from '../../../src/vendor/type/is.js';
 import { substanceFactory } from '../../factory/substance.js';
 
 const loader = td.object<Loader>();

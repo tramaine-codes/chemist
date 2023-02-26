@@ -1,9 +1,9 @@
 import fs from 'fs';
 import * as td from 'testdouble';
 import { afterEach, expect, test } from 'vitest';
-import { FileSystem } from '../../src/adapter/file-system/file-system.js';
-import { Operations } from '../../src/adapter/file-system/operations.js';
-import { Zip } from '../../src/adapter/file-system/zip.js';
+import { FileSystem } from '../../src/vendor/file-system/file-system.js';
+import { Operations } from '../../src/vendor/file-system/operations.js';
+import { Zip } from '../../src/vendor/file-system/zip.js';
 
 const operations = td.object<Operations>();
 const zip = td.object<Zip>();

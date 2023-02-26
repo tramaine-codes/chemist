@@ -1,4 +1,4 @@
-import { Process } from '../../../../adapter/process/process.js';
+import { Process } from '../../../../vendor/process/process.js';
 
 export class GitGateway {
   constructor(private readonly process: Process) {}

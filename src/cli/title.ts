@@ -1,5 +1,5 @@
-import { Box } from '../adapter/text/box.js';
-import { Chalk } from '../adapter/text/chalk.js';
+import { Box } from '../vendor/text/box.js';
+import { Chalk } from '../vendor/text/chalk.js';
 
 export class Title {
   constructor(

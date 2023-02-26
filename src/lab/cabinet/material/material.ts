@@ -1,5 +1,5 @@
-import { Package } from '../../../adapter/pkg/package.js';
-import { Is } from '../../../adapter/type/is.js';
+import { Package } from '../../../vendor/pkg/package.js';
+import { Is } from '../../../vendor/type/is.js';
 import { Compound } from './compound.js';
 
 export class Material {
