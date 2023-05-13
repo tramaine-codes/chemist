@@ -12,7 +12,7 @@ const cli = Factory.define<CliSubstance>(() => ({
 }));
 
 const config = Factory.define<ConfigSubstance>(() => ({
-  name: faker.company.bsBuzz(),
+  name: faker.company.buzzVerb(),
   download: {
     destination: faker.word.noun(),
   },
