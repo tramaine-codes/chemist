@@ -52,7 +52,7 @@
   "devDependencies": {
     "@commitlint/cli": "17.6.3",
     "@commitlint/config-conventional": "17.6.3",
-    "@faker-js/faker": "8.0.1",
+    "@faker-js/faker": "8.0.2",
     "@release-it/conventional-changelog": "5.1.1",
     "@types/archiver": "5.3.2",
     "@types/node": "20.2.5",
