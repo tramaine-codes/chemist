@@ -50,18 +50,18 @@
     "watch": "tsc -c"
   },
   "devDependencies": {
-    "@commitlint/cli": "17.6.5",
-    "@commitlint/config-conventional": "17.6.5",
+    "@commitlint/cli": "17.6.6",
+    "@commitlint/config-conventional": "17.6.6",
     "@faker-js/faker": "8.0.2",
     "@release-it/conventional-changelog": "5.1.1",
     "@types/archiver": "5.3.2",
     "@types/node": "20.3.1",
-    "@typescript-eslint/eslint-plugin": "5.59.11",
-    "@typescript-eslint/parser": "5.59.11",
+    "@typescript-eslint/eslint-plugin": "5.60.0",
+    "@typescript-eslint/parser": "5.60.0",
     "@vitest/coverage-c8": "0.32.2",
     "barrelsby": "2.8.0",
     "del-cli": "5.0.0",
-    "eslint": "8.42.0",
+    "eslint": "8.43.0",
     "fishery": "2.2.2",
     "husky": "8.0.3",
     "lint-staged": "13.2.2",
@@ -84,7 +84,7 @@
     "del": "7.0.0",
     "execa": "7.1.1",
     "listr2": "6.6.0",
-    "make-dir": "3.1.0",
+    "make-dir": "4.0.0",
     "pkg-dir": "7.0.0",
     "read-pkg-up": "9.1.0"
   }
