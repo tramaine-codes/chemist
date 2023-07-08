@@ -55,10 +55,10 @@
     "@faker-js/faker": "8.0.2",
     "@release-it/conventional-changelog": "6.0.0",
     "@types/archiver": "5.3.2",
-    "@types/node": "20.4.0",
+    "@types/node": "20.4.1",
     "@typescript-eslint/eslint-plugin": "5.61.0",
     "@typescript-eslint/parser": "5.61.0",
-    "@vitest/coverage-c8": "0.32.4",
+    "@vitest/coverage-c8": "0.33.0",
     "barrelsby": "2.8.0",
     "del-cli": "5.0.0",
     "eslint": "8.44.0",
@@ -66,13 +66,13 @@
     "husky": "8.0.3",
     "lint-staged": "13.2.3",
     "prettier": "3.0.0",
-    "pretty-format": "29.6.0",
+    "pretty-format": "29.6.1",
     "release-it": "15.11.0",
     "replace-in-files-cli": "2.2.0",
     "testdouble": "3.18.0",
     "tsx": "3.12.7",
     "typescript": "5.1.6",
-    "vitest": "0.32.4"
+    "vitest": "0.33.0"
   },
   "dependencies": {
     "@sindresorhus/is": "5.4.1",
