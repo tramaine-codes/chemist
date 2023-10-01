@@ -34,14 +34,14 @@
     "zip"
   ],
   "scripts": {
-    "barrels": "barrelsby -c barrelsby.json && pnpm run format && replace-in-files --regex=$'(export * from \\'.+)?\\';\\n' --replacement=$'$1.js\\';\\n' ./src/index.ts",
-    "build": "pnpm run clean && pnpm run barrels && pnpm test && tsc",
-    "build:ci": "pnpm run clean && pnpm test && tsc",
+    "barrels": "barrelsby -c barrelsby.json && npm run format && replace-in-files --regex=$'(export * from \\'.+)?\\';\\n' --replacement=$'$1.js\\';\\n' ./src/index.ts",
+    "build": "npm run clean && npm run barrels && npm test && tsc",
+    "build:ci": "npm run clean && npm test && tsc",
     "clean": "del-cli lib coverage",
     "format": "prettier . --write",
     "lint": "eslint . --ext .js,.ts",
     "lint:fix": "eslint . --ext .js,.ts --fix",
-    "prepack": "pnpm run build",
+    "prepack": "npm run build",
     "prepare": "husky install",
     "release": "release-it --ci",
     "test": "vitest run",
