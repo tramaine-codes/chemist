@@ -4,7 +4,10 @@ import { Is } from '../../vendor/type/is.js';
 import { CliSubstance, ConfigSubstance } from './material/substance.js';
 
 export class Cabinet {
-  constructor(private readonly loader: Loader, private readonly is: Is) {}
+  constructor(
+    private readonly loader: Loader,
+    private readonly is: Is
+  ) {}
 
   config(): ConfigSubstance {
     const configSubstance = this.loader.load();

@@ -4,7 +4,10 @@ import { LabTech } from './lab-tech.js';
 import { Variables } from '../experiment/variables.js';
 
 export class Chemist {
-  constructor(private readonly lab: Lab, private readonly tech: LabTech) {}
+  constructor(
+    private readonly lab: Lab,
+    private readonly tech: LabTech
+  ) {}
 
   async run(listing: CatalogListing, variables?: Variables) {
     await this.lab.run(this.tech.prep(listing, variables));
