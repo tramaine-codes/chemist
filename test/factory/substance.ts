@@ -3,7 +3,7 @@ import { Factory } from 'fishery';
 import {
   CliSubstance,
   ConfigSubstance,
-} from '../../src/lab/cabinet/material/substance';
+} from '../../src/lab/cabinet/material/substance.js';
 
 const cli = Factory.define<CliSubstance>(() => ({
   git: {

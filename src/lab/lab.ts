@@ -1,5 +1,5 @@
-import { Experiment } from '../experiment/experiment.js';
+import { Operation } from '../operation/operation.js';
 
 export interface Lab {
-  run(experiment: Experiment): Promise<void>;
+  run(experiment: Operation): Promise<void>;
 }

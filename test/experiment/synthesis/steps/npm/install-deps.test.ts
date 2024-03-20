@@ -1,14 +1,14 @@
 import * as td from 'testdouble';
 import { afterEach, expect, test } from 'vitest';
-import { InstallDeps } from '../../../../../src/experiment/synthesis/steps/npm/install-deps.js';
+import { NpmGateway } from '../../../../../src/infrastructure/npm/npm-gateway.js';
 import { Material } from '../../../../../src/lab/cabinet/material/material.js';
+import { InstallDeps } from '../../../../../src/operation/synthesis/steps/npm/install-deps.js';
 import { Package } from '../../../../../src/vendor/pkg/package.js';
-import { Process } from '../../../../../src/vendor/process/process.js';
 import { Is } from '../../../../../src/vendor/type/is.js';
 import { compoundFactory } from '../../../../factory/compound.js';
 
 const pkg = td.object<Package>();
-const process = td.object<Process>();
+const npmGateway = td.object<NpmGateway>();
 const compound = compoundFactory.build();
 const material = new Material(compound, pkg, new Is());
 const {
@@ -19,16 +19,16 @@ afterEach(() => {
   td.reset();
 });
 
-test('provides install deps step description', () => {
-  const compress = new InstallDeps(material, process);
+test('provides install dependencies step description', () => {
+  const compress = new InstallDeps(material, npmGateway);
 
   expect(compress.description()).toEqual('Install dependencies');
 });
 
-test('builds project', async () => {
-  const compress = new InstallDeps(material, process);
+test('install dependencies', async () => {
+  const compress = new InstallDeps(material, npmGateway);
 
   await compress.action();
 
-  td.verify(process.exec('npm', ['install'], downloadDir));
+  td.verify(npmGateway.installDeps(downloadDir));
 });

@@ -44,7 +44,6 @@ export class Material {
     };
   }
 
-  static from(compounds: Compound) {
-    return new Material(compounds, Package.build(), new Is());
-  }
+  static from = (compounds: Compound) =>
+    new Material(compounds, Package.build(), new Is());
 }

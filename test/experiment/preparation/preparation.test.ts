@@ -1,10 +1,10 @@
 import { format } from 'pretty-format';
 import * as td from 'testdouble';
 import { afterEach, expect, test } from 'vitest';
-import { Disposal } from '../../../src/experiment/disposal/disposal.js';
-import { Preparation } from '../../../src/experiment/preparation/preparation.js';
-import { Prepare } from '../../../src/experiment/preparation/steps/prepare.js';
 import { Material } from '../../../src/lab/cabinet/material/material.js';
+import { Disposal } from '../../../src/operation/disposal/disposal.js';
+import { Preparation } from '../../../src/operation/preparation/preparation.js';
+import { Prepare } from '../../../src/operation/preparation/steps/prepare.js';
 
 const material = td.object<Material>();
 

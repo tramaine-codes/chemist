@@ -11,7 +11,5 @@ export class Release {
     return this.pkg.packageVersionSync();
   }
 
-  static build() {
-    return new Release(Package.build());
-  }
+  static build = () => new Release(Package.build());
 }

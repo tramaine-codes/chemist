@@ -5,5 +5,5 @@
 export * from './cli/cli-lab.js';
 export * from './cli/release.js';
 export * from './cli/title.js';
-export * from './experiment/variables.js';
 export * from './lab/chemist.js';
+export * from './operation/variables.js';

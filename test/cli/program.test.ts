@@ -3,7 +3,7 @@ import { afterEach, beforeEach, expect, test } from 'vitest';
 import { Program } from '../../src/cli/program.js';
 import { Release } from '../../src/cli/release.js';
 import { Title, TitleLogger } from '../../src/cli/title.js';
-import { Chemist } from '../../src/lab/chemist';
+import { Chemist } from '../../src/lab/chemist.js';
 
 Release.build = td.func(Release.build);
 const logger = td.func<TitleLogger>();

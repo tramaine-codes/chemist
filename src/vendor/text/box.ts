@@ -1,8 +1,8 @@
 import boxen from 'boxen';
 
 export class Box {
-  box(text: string) {
-    return boxen(text, {
+  box = (text: string) =>
+    boxen(text, {
       borderColor: 'green',
       borderStyle: 'double',
       margin: {
@@ -18,5 +18,4 @@ export class Box {
         right: 15,
       },
     });
-  }
 }

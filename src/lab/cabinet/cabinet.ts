@@ -1,5 +1,5 @@
-import { Variables } from '../../experiment/variables.js';
-import { Loader } from '../../vendor/config/loader.js';
+import { Variables } from '../../operation/variables.js';
+import { Loader } from '../../vendor/loader/loader.js';
 import { Is } from '../../vendor/type/is.js';
 import { CliSubstance, ConfigSubstance } from './material/substance.js';
 

@@ -1,14 +1,14 @@
-import * as td from 'testdouble';
 import { format } from 'pretty-format';
+import * as td from 'testdouble';
 import { afterEach, expect, test } from 'vitest';
-import { Download } from '../../../src/experiment/download/download.js';
-import { Compress } from '../../../src/experiment/synthesis/steps/compress.js';
-import { Build } from '../../../src/experiment/synthesis/steps/npm/build.js';
-import { InstallDeps } from '../../../src/experiment/synthesis/steps/npm/install-deps.js';
-import { InstallProdDeps } from '../../../src/experiment/synthesis/steps/npm/install-prod-deps.js';
-import { Prepare } from '../../../src/experiment/synthesis/steps/prepare.js';
-import { Synthesis } from '../../../src/experiment/synthesis/synthesis.js';
 import { Material } from '../../../src/lab/cabinet/material/material.js';
+import { Download } from '../../../src/operation/download/download.js';
+import { Compress } from '../../../src/operation/synthesis/steps/compress.js';
+import { Build } from '../../../src/operation/synthesis/steps/npm/build.js';
+import { InstallDeps } from '../../../src/operation/synthesis/steps/npm/install-deps.js';
+import { InstallProdDeps } from '../../../src/operation/synthesis/steps/npm/install-prod-deps.js';
+import { Prepare } from '../../../src/operation/synthesis/steps/prepare.js';
+import { Synthesis } from '../../../src/operation/synthesis/synthesis.js';
 
 const material = td.object<Material>();
 

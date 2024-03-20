@@ -1,20 +1,20 @@
 import { packageDirectorySync } from 'pkg-dir';
 import { readPackageUp, readPackageUpSync } from 'read-pkg-up';
-import { Assert } from '../type/assert.js';
 import { fileURLToPath } from 'url';
+import { Assert } from '../type/assert.js';
 
 export class Package {
   constructor(private readonly assert: Assert) {}
 
-  rootDir() {
+  rootDir = () => {
     const pkgDir = packageDirectorySync();
 
     this.assert.string(pkgDir);
 
     return pkgDir;
-  }
+  };
 
-  async packageVersion(cwd: string) {
+  packageVersion = async (cwd: string) => {
     const version = (
       await readPackageUp({
         cwd,
@@ -24,9 +24,9 @@ export class Package {
     this.assert.string(version);
 
     return version;
-  }
+  };
 
-  packageVersionSync() {
+  packageVersionSync = () => {
     const version = readPackageUpSync({
       cwd: this.dirName(),
     })?.packageJson.version;
@@ -34,13 +34,9 @@ export class Package {
     this.assert.string(version);
 
     return version;
-  }
+  };
 
-  private dirName() {
-    return fileURLToPath(new URL('.', import.meta.url));
-  }
+  private dirName = () => fileURLToPath(new URL('.', import.meta.url));
 
-  static build() {
-    return new Package(new Assert());
-  }
+  static build = () => new Package(new Assert());
 }

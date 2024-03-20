@@ -1,7 +1,7 @@
-import { CatalogListing } from '../experiment/catalog.js';
-import { Lab } from './lab.js';
+import { CatalogListing } from '../operation/catalog.js';
+import { Variables } from '../operation/variables.js';
 import { LabTech } from './lab-tech.js';
-import { Variables } from '../experiment/variables.js';
+import { Lab } from './lab.js';
 
 export class Chemist {
   constructor(
@@ -9,11 +9,8 @@ export class Chemist {
     private readonly tech: LabTech
   ) {}
 
-  async run(listing: CatalogListing, variables?: Variables) {
+  run = async (listing: CatalogListing, variables?: Variables) =>
     await this.lab.run(this.tech.prep(listing, variables));
-  }
 
-  static from(lab: Lab) {
-    return new Chemist(lab, LabTech.build());
-  }
+  static from = (lab: Lab) => new Chemist(lab, LabTech.build());
 }

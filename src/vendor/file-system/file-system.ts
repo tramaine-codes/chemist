@@ -1,33 +1,33 @@
-import { Operations } from './operations.js';
+import { FileOperations } from './file-operations.js';
 import { Zip } from './zip.js';
 
 export class FileSystem {
   constructor(
-    private readonly operations: Operations,
+    private readonly operations: FileOperations,
     private readonly compressor: Zip
   ) {}
 
-  async rm(...patterns: readonly string[]) {
+  rm = async (...patterns: readonly string[]) => {
     await this.operations.rm(patterns);
-  }
+  };
 
-  async mkdir(path: string) {
-    await this.operations.mkdir(path);
-  }
+  mkdir = async (path: string) => {
+    this.operations.mkdir(path);
+  };
 
-  async zip(destination: string, patterns: readonly string[], cwd: string) {
+  zip = async (
+    destination: string,
+    patterns: readonly string[],
+    cwd: string
+  ) => {
     await this.compressor.zip(
       this.operations.writeStream(destination),
       patterns,
       cwd
     );
-  }
+  };
 
-  basename(path: string) {
-    return this.operations.basename(path);
-  }
+  basename = (path: string) => this.operations.basename(path);
 
-  static build() {
-    return new FileSystem(new Operations(), new Zip());
-  }
+  static build = () => new FileSystem(new FileOperations(), new Zip());
 }

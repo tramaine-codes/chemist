@@ -1,15 +1,11 @@
-import { Experiment } from '../experiment/experiment.js';
 import { Lab } from '../lab/lab.js';
+import { Operation } from '../operation/operation.js';
 import { Runner } from '../vendor/runner/runner.js';
 
 export class CliLab implements Lab {
   constructor(private readonly runner: Runner) {}
 
-  async run(experiment: Experiment) {
-    await this.runner.run(experiment);
-  }
+  run = async (operation: Operation) => await this.runner.run(operation);
 
-  static build() {
-    return new CliLab(new Runner());
-  }
+  static build = () => new CliLab(new Runner());
 }

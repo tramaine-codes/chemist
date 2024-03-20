@@ -1,7 +1,7 @@
 import * as td from 'testdouble';
 import { afterEach, expect, test } from 'vitest';
-import { Dispose } from '../../../../src/experiment/disposal/steps/dispose.js';
 import { Material } from '../../../../src/lab/cabinet/material/material.js';
+import { Dispose } from '../../../../src/operation/disposal/steps/dispose.js';
 import { FileSystem } from '../../../../src/vendor/file-system/file-system.js';
 import { Package } from '../../../../src/vendor/pkg/package.js';
 import { Is } from '../../../../src/vendor/type/is.js';

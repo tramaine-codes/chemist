@@ -1,7 +1,7 @@
 import { Factory } from 'fishery';
 import { Compound } from '../../src/lab/cabinet/material/compound';
 import { Mixer } from '../../src/lab/cabinet/mixer';
-import { substanceFactory } from './substance';
+import { substanceFactory } from './substance.js';
 
 const mixer = new Mixer();
 

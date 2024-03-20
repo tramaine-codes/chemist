@@ -1,7 +1,7 @@
 import * as td from 'testdouble';
 import { afterEach, beforeEach, expect, test } from 'vitest';
-import { Compress } from '../../../../src/experiment/synthesis/steps/compress.js';
 import { Material } from '../../../../src/lab/cabinet/material/material.js';
+import { Compress } from '../../../../src/operation/synthesis/steps/compress.js';
 import { FileSystem } from '../../../../src/vendor/file-system/file-system.js';
 import { Package } from '../../../../src/vendor/pkg/package.js';
 import { Is } from '../../../../src/vendor/type/is.js';

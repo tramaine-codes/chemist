@@ -1,6 +1,6 @@
 import { Command } from 'commander';
-import { Variables } from '../experiment/variables.js';
 import { Chemist } from '../lab/chemist.js';
+import { Variables } from '../operation/variables.js';
 import { CliLab } from './cli-lab.js';
 import { Release } from './release.js';
 import { Title, TitleLogger } from './title.js';
@@ -12,25 +12,24 @@ export class Program {
     private readonly chemist: Chemist
   ) {}
 
-  run(argv: readonly string[]) {
+  run = (argv: readonly string[]) => {
     const { name, version } = this.release;
     const program = setup(name, version, this.chemist);
 
     this.title.log(name, version);
 
     program.parseAsync(argv);
-  }
+  };
 
-  static from(logger: TitleLogger) {
-    return new Program(
+  static from = (logger: TitleLogger) =>
+    new Program(
       Release.build(),
       Title.build(logger),
       Chemist.from(CliLab.build())
     );
-  }
 }
 
-function setup(name: string, version: string, chemist: Chemist) {
+const setup = (name: string, version: string, chemist: Chemist) => {
   const program = new Command();
 
   program
@@ -78,4 +77,4 @@ function setup(name: string, version: string, chemist: Chemist) {
     });
 
   return program;
-}
+};
