@@ -55,9 +55,9 @@
     "@faker-js/faker": "8.4.1",
     "@release-it/conventional-changelog": "8.0.1",
     "@types/archiver": "6.0.2",
-    "@types/node": "20.11.30",
-    "@typescript-eslint/eslint-plugin": "7.3.1",
-    "@typescript-eslint/parser": "7.3.1",
+    "@types/node": "20.12.2",
+    "@typescript-eslint/eslint-plugin": "7.4.0",
+    "@typescript-eslint/parser": "7.4.0",
     "@vitest/coverage-v8": "1.4.0",
     "barrelsby": "2.8.1",
     "del-cli": "5.1.0",
@@ -69,9 +69,9 @@
     "pretty-format": "29.7.0",
     "release-it": "17.1.1",
     "replace-in-files-cli": "2.2.0",
-    "testdouble": "3.20.1",
+    "testdouble": "3.20.2",
     "tsx": "4.7.1",
-    "typescript": "5.4.2",
+    "typescript": "5.4.3",
     "vitest": "1.4.0"
   },
   "dependencies": {
@@ -83,7 +83,7 @@
     "cosmiconfig": "9.0.0",
     "del": "7.1.0",
     "execa": "8.0.1",
-    "listr2": "8.0.2",
+    "listr2": "8.1.2",
     "make-dir": "4.0.0",
     "pkg-dir": "8.0.0",
     "read-pkg-up": "10.1.0"
