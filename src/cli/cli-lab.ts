@@ -1,5 +1,5 @@
-import { Lab } from '../lab/lab.js';
-import { Operation } from '../operation/operation.js';
+import type { Lab } from '../lab/lab.js';
+import type { Operation } from '../operation/operation.js';
 import { Runner } from '../vendor/runner/runner.js';
 
 export class CliLab implements Lab {

@@ -5,7 +5,7 @@
     "src/cli/cli-lab.ts",
     "src/cli/release.ts",
     "src/cli/title.ts",
-    "src/experiment/variables.ts",
-    "src/lab/chemist.ts"
+    "src/lab/chemist.ts",
+    "src/operation/variables.ts"
   ]
 }

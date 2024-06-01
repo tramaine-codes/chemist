@@ -1,9 +1,9 @@
-import fs from 'fs';
+import type fs from 'node:fs';
 import * as td from 'testdouble';
 import { afterEach, expect, test } from 'vitest';
-import { FileOperations } from '../../src/vendor/file-system/file-operations.js';
+import type { FileOperations } from '../../src/vendor/file-system/file-operations.js';
 import { FileSystem } from '../../src/vendor/file-system/file-system.js';
-import { Zip } from '../../src/vendor/file-system/zip.js';
+import type { Zip } from '../../src/vendor/file-system/zip.js';
 
 const fileOperations = td.object<FileOperations>();
 const zip = td.object<Zip>();

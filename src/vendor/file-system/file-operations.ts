@@ -1,7 +1,7 @@
 import { deleteAsync } from 'del';
-import fs from 'fs';
 import { makeDirectory } from 'make-dir';
-import { basename } from 'path';
+import fs from 'node:fs';
+import { basename } from 'node:path';
 
 export class FileOperations {
   rm = async (patterns: readonly string[]) => await deleteAsync(patterns);

@@ -1,16 +1,15 @@
-import { Material } from '../lab/cabinet/material/material.js';
+import type { Material } from '../lab/cabinet/material/material.js';
 import { Disposal } from './disposal/disposal.js';
 import { Download } from './download/download.js';
-import { Operation } from './operation.js';
+import type { Operation } from './operation.js';
 import { Preparation } from './preparation/preparation.js';
 import { Synthesis } from './synthesis/synthesis.js';
 
 export type CatalogListing = keyof typeof toc;
 
 export class Catalog {
-  experiment(listing: CatalogListing, material: Material): Operation {
-    return new toc[listing](material);
-  }
+  operation = (listing: CatalogListing, material: Material): Operation =>
+    new toc[listing](material);
 }
 
 const toc = {

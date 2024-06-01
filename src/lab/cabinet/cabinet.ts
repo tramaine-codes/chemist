@@ -1,7 +1,7 @@
-import { Variables } from '../../operation/variables.js';
+import type { Variables } from '../../operation/variables.js';
 import { Loader } from '../../vendor/loader/loader.js';
 import { Is } from '../../vendor/type/is.js';
-import { CliSubstance, ConfigSubstance } from './material/substance.js';
+import type { CliSubstance, ConfigSubstance } from './material/substance.js';
 
 export class Cabinet {
   constructor(
@@ -9,7 +9,7 @@ export class Cabinet {
     private readonly is: Is
   ) {}
 
-  config(): ConfigSubstance {
+  config = (): ConfigSubstance => {
     const configSubstance = this.loader.load();
 
     if (this.is.nullOrUndefined(configSubstance)) {
@@ -20,13 +20,11 @@ export class Cabinet {
       ...configSubstance,
       download: configSubstance.download ?? { destination: '.chemist' },
     };
-  }
+  };
 
-  variables({ branch }: Variables = { branch: 'main' }): CliSubstance {
+  variables = ({ branch }: Variables = { branch: 'main' }): CliSubstance => {
     return { git: { branch } };
-  }
+  };
 
-  static build() {
-    return new Cabinet(new Loader(), new Is());
-  }
+  static build = () => new Cabinet(new Loader(), new Is());
 }

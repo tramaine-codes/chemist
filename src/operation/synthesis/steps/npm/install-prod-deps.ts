@@ -1,6 +1,6 @@
 import { NpmGateway } from '../../../../infrastructure/npm/npm-gateway.js';
-import { Material } from '../../../../lab/cabinet/material/material.js';
-import { Step } from '../../../step.js';
+import type { Material } from '../../../../lab/cabinet/material/material.js';
+import type { Step } from '../../../step.js';
 
 export class InstallProdDeps implements Step {
   constructor(

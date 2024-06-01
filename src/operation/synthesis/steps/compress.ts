@@ -1,7 +1,7 @@
-import { Material } from '../../../lab/cabinet/material/material.js';
+import type { Material } from '../../../lab/cabinet/material/material.js';
 import { FileSystem } from '../../../vendor/file-system/file-system.js';
 import { Package } from '../../../vendor/pkg/package.js';
-import { Step } from '../../step.js';
+import type { Step } from '../../step.js';
 
 export class Compress implements Step {
   constructor(

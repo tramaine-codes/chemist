@@ -1,8 +1,8 @@
 import * as td from 'testdouble';
 import { afterEach, expect, test } from 'vitest';
 import { Cabinet } from '../../../src/lab/cabinet/cabinet.js';
-import { ConfigSubstance } from '../../../src/lab/cabinet/material/substance.js';
-import { Loader } from '../../../src/vendor/config/loader.js';
+import type { ConfigSubstance } from '../../../src/lab/cabinet/material/substance.js';
+import type { Loader } from '../../../src/vendor/loader/loader.js';
 import { Is } from '../../../src/vendor/type/is.js';
 import { substanceFactory } from '../../factory/substance.js';
 

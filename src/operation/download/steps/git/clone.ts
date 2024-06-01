@@ -1,6 +1,6 @@
 import { GitGateway } from '../../../../infrastructure/git/git-gateway.js';
-import { Material } from '../../../../lab/cabinet/material/material.js';
-import { Step } from '../../../step.js';
+import type { Material } from '../../../../lab/cabinet/material/material.js';
+import type { Step } from '../../../step.js';
 
 export class Clone implements Step {
   constructor(

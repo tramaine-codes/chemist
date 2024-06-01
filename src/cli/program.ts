@@ -1,9 +1,9 @@
 import { Command } from 'commander';
 import { Chemist } from '../lab/chemist.js';
-import { Variables } from '../operation/variables.js';
+import type { Variables } from '../operation/variables.js';
 import { CliLab } from './cli-lab.js';
 import { Release } from './release.js';
-import { Title, TitleLogger } from './title.js';
+import { Title, type TitleLogger } from './title.js';
 
 export class Program {
   constructor(

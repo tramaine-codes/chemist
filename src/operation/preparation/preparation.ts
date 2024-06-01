@@ -1,4 +1,4 @@
-import { Material } from '../../lab/cabinet/material/material.js';
+import type { Material } from '../../lab/cabinet/material/material.js';
 import { Disposal } from '../disposal/disposal.js';
 import { Series } from '../series.js';
 import { Study } from '../study.js';

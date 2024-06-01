@@ -1,5 +1,5 @@
-import { Catalog, CatalogListing } from '../operation/catalog.js';
-import { Variables } from '../operation/variables.js';
+import { Catalog, type CatalogListing } from '../operation/catalog.js';
+import type { Variables } from '../operation/variables.js';
 import { Cabinet } from './cabinet/cabinet.js';
 import { Material } from './cabinet/material/material.js';
 import { Mixer } from './cabinet/mixer.js';
@@ -12,7 +12,7 @@ export class LabTech {
   ) {}
 
   prep = (listing: CatalogListing, variables?: Variables) =>
-    this.catalog.experiment(listing, this.material(variables));
+    this.catalog.operation(listing, this.material(variables));
 
   private material = (variables?: Variables) =>
     Material.from(this.compound(variables));

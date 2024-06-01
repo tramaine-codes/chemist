@@ -1,8 +1,8 @@
 import * as td from 'testdouble';
 import { afterEach, expect, test } from 'vitest';
-import { Title, TitleLogger } from '../../src/cli/title.js';
-import { Box } from '../../src/vendor/text/box.js';
-import { Chalk } from '../../src/vendor/text/chalk.js';
+import { Title, type TitleLogger } from '../../src/cli/title.js';
+import type { Box } from '../../src/vendor/text/box.js';
+import type { Chalk } from '../../src/vendor/text/chalk.js';
 
 const chalk = td.object<Chalk>();
 const box = td.object<Box>();

@@ -1,9 +1,9 @@
 import * as td from 'testdouble';
 import { afterEach, expect, test } from 'vitest';
-import { NpmGateway } from '../../../../../src/infrastructure/npm/npm-gateway.js';
+import type { NpmGateway } from '../../../../../src/infrastructure/npm/npm-gateway.js';
 import { Material } from '../../../../../src/lab/cabinet/material/material.js';
 import { InstallDeps } from '../../../../../src/operation/synthesis/steps/npm/install-deps.js';
-import { Package } from '../../../../../src/vendor/pkg/package.js';
+import type { Package } from '../../../../../src/vendor/pkg/package.js';
 import { Is } from '../../../../../src/vendor/type/is.js';
 import { compoundFactory } from '../../../../factory/compound.js';
 

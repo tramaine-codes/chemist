@@ -1,3 +1,3 @@
-import { CliSubstance, ConfigSubstance } from './substance.js';
+import type { CliSubstance, ConfigSubstance } from './substance.js';
 
 export type Compound = ConfigSubstance & CliSubstance;

@@ -1,21 +1,21 @@
 import * as td from 'testdouble';
 import { afterEach, expect, test } from 'vitest';
 import { CliLab } from '../../src/cli/cli-lab.js';
-import { Experiment } from '../../src/experiment/experiment.js';
-import { Runner } from '../../src/vendor/runner/runner.js';
+import type { Operation } from '../../src/operation/operation.js';
+import type { Runner } from '../../src/vendor/runner/runner.js';
 
 afterEach(() => {
   td.reset();
 });
 
-test('runs an experiment', async () => {
+test('runs an operation', async () => {
   const runner = td.object<Runner>();
-  const experiment = td.object<Experiment>();
+  const operation = td.object<Operation>();
   const lab = new CliLab(runner);
 
-  await lab.run(experiment);
+  await lab.run(operation);
 
-  td.verify(runner.run(experiment));
+  td.verify(runner.run(operation));
 });
 
 test('returns a cli lab', () => {

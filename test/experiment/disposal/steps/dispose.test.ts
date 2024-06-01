@@ -3,7 +3,7 @@ import { afterEach, expect, test } from 'vitest';
 import { Material } from '../../../../src/lab/cabinet/material/material.js';
 import { Dispose } from '../../../../src/operation/disposal/steps/dispose.js';
 import { FileSystem } from '../../../../src/vendor/file-system/file-system.js';
-import { Package } from '../../../../src/vendor/pkg/package.js';
+import type { Package } from '../../../../src/vendor/pkg/package.js';
 import { Is } from '../../../../src/vendor/type/is.js';
 import { compoundFactory } from '../../../factory/compound.js';
 

@@ -1,5 +1,5 @@
-import { Operation } from './operation.js';
-import { Step } from './step.js';
+import type { Operation } from './operation.js';
+import type { Step } from './step.js';
 
 export class Series implements Operation {
   public readonly steps: readonly Step[];

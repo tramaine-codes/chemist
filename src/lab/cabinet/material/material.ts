@@ -1,6 +1,6 @@
 import { Package } from '../../../vendor/pkg/package.js';
 import { Is } from '../../../vendor/type/is.js';
-import { Compound } from './compound.js';
+import type { Compound } from './compound.js';
 
 export class Material {
   private root!: string;

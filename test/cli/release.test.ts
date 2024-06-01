@@ -1,7 +1,7 @@
 import * as td from 'testdouble';
 import { afterEach, beforeEach, expect, test } from 'vitest';
 import { Release } from '../../src/cli/release.js';
-import { Package } from '../../src/vendor/pkg/package.js';
+import type { Package } from '../../src/vendor/pkg/package.js';
 
 const pkg = td.object<Package>();
 

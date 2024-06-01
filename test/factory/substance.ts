@@ -1,6 +1,6 @@
 import { faker } from '@faker-js/faker';
 import { Factory } from 'fishery';
-import {
+import type {
   CliSubstance,
   ConfigSubstance,
 } from '../../src/lab/cabinet/material/substance.js';

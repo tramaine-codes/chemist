@@ -1,5 +1,5 @@
-import { Compound } from './material/compound.js';
-import { CliSubstance, ConfigSubstance } from './material/substance.js';
+import type { Compound } from './material/compound.js';
+import type { CliSubstance, ConfigSubstance } from './material/substance.js';
 
 export class Mixer {
   mix = (config: ConfigSubstance, cli: CliSubstance): Compound => ({

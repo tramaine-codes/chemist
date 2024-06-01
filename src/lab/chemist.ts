@@ -1,7 +1,7 @@
-import { CatalogListing } from '../operation/catalog.js';
-import { Variables } from '../operation/variables.js';
+import type { CatalogListing } from '../operation/catalog.js';
+import type { Variables } from '../operation/variables.js';
 import { LabTech } from './lab-tech.js';
-import { Lab } from './lab.js';
+import type { Lab } from './lab.js';
 
 export class Chemist {
   constructor(

@@ -1,6 +1,6 @@
-import { Material } from '../../../lab/cabinet/material/material.js';
+import type { Material } from '../../../lab/cabinet/material/material.js';
 import { FileSystem } from '../../../vendor/file-system/file-system.js';
-import { Step } from '../../step.js';
+import type { Step } from '../../step.js';
 
 export class Prepare implements Step {
   constructor(
@@ -8,13 +8,13 @@ export class Prepare implements Step {
     private readonly fs: FileSystem
   ) {}
 
-  description() {
+  description = () => {
     const {
       compression: { destination },
     } = this.material;
 
     return `Create ${this.fs.basename(destination)}/`;
-  }
+  };
 
   action = async () => {
     const {

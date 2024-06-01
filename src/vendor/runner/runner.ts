@@ -1,6 +1,6 @@
 import { Listr } from 'listr2';
-import { Operation } from '../../operation/operation.js';
-import { Step } from '../../operation/step.js';
+import type { Operation } from '../../operation/operation.js';
+import type { Step } from '../../operation/step.js';
 
 export class Runner {
   run = async ({ steps }: Operation) => {

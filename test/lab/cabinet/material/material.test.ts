@@ -2,7 +2,7 @@ import * as td from 'testdouble';
 import { afterEach, beforeEach, expect, test } from 'vitest';
 import { Material } from '../../../../src/lab/cabinet/material/material.js';
 import { Mixer } from '../../../../src/lab/cabinet/mixer.js';
-import { Package } from '../../../../src/vendor/pkg/package.js';
+import type { Package } from '../../../../src/vendor/pkg/package.js';
 import { Is } from '../../../../src/vendor/type/is.js';
 import { substanceFactory } from '../../../factory/substance.js';
 
@@ -13,9 +13,7 @@ const compound = new Mixer().mix(config, cli);
 const pkg = td.object<Package>();
 const rootDir = 'foo';
 
-const material = () => {
-  return new Material(compound, pkg, new Is());
-};
+const material = new Material(compound, pkg, new Is());
 
 beforeEach(() => {
   td.when(pkg.rootDir()).thenReturn<string>(rootDir);
@@ -28,7 +26,7 @@ afterEach(() => {
 test('provides name', () => {
   const { name: expected } = config;
 
-  const { name: actual } = material();
+  const { name: actual } = material;
 
   expect(actual).toEqual(expected);
 });
@@ -41,7 +39,7 @@ test('provides git settings', () => {
     git: { branch },
   } = cli;
 
-  const { git } = material();
+  const { git } = material;
 
   expect(git).toEqual({
     url,
@@ -54,7 +52,7 @@ test('provides compression settings', () => {
     compression: { destination, include },
   } = config;
 
-  const { compression } = material();
+  const { compression } = material;
 
   expect(compression).toEqual({
     destination: `${rootDir}/${destination}`,
@@ -67,7 +65,7 @@ test('provides the download directory path and name', () => {
     download: { destination },
   } = config;
 
-  expect(material().download.destination).toEqual(`${rootDir}/${destination}`);
+  expect(material.download.destination).toEqual(`${rootDir}/${destination}`);
 });
 
 test('build material from compounds', () => {

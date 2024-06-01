@@ -1,7 +1,7 @@
 import * as td from 'testdouble';
 import { afterEach, test } from 'vitest';
 import { NpmGateway } from '../../../src/infrastructure/npm/npm-gateway.js';
-import { Process } from '../../../src/vendor/process/process.js';
+import type { Process } from '../../../src/vendor/process/process.js';
 
 const process = td.object<Process>();
 

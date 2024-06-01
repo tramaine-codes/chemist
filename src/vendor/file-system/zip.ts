@@ -1,5 +1,5 @@
-import archiver, { Archiver } from 'archiver';
-import fs from 'fs';
+import archiver, { type Archiver } from 'archiver';
+import type fs from 'node:fs';
 
 export class Zip {
   zip = async (
@@ -10,7 +10,9 @@ export class Zip {
     const archive = archiver('zip');
 
     archive.pipe(stream);
-    patterns.forEach((pattern) => archive.glob(pattern, { cwd }));
+    for (const pattern of patterns) {
+      archive.glob(pattern, { cwd });
+    }
 
     await this.finalize(archive, stream);
   };
