@@ -1,7 +1,6 @@
 import { Command } from 'commander';
 import type { Variables } from '../infrastructure/config/variables.js';
 import { Chemist } from '../lab/chemist.js';
-import { CliLab } from './cli-lab.js';
 import { Release } from './release.js';
 import { Title, type TitleLogger } from './title.js';
 
@@ -22,11 +21,7 @@ export class Program {
   };
 
   static from = (logger: TitleLogger) =>
-    new Program(
-      Release.build(),
-      Title.build(logger),
-      Chemist.from(CliLab.build())
-    );
+    new Program(Release.build(), Title.build(logger), Chemist.build());
 }
 
 const setup = (name: string, version: string, chemist: Chemist) => {

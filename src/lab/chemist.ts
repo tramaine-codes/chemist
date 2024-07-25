@@ -1,16 +1,16 @@
 import type { Variables } from '../infrastructure/config/variables.js';
-import type { CatalogListing } from '../operation/catalog.js';
+import type { OpName } from '../operation/catalog.js';
+import { Runner } from '../vendor/runner/runner.js';
 import { LabTech } from './lab-tech.js';
-import type { Lab } from './lab.js';
 
 export class Chemist {
   constructor(
-    private readonly lab: Lab,
+    private readonly runner: Runner,
     private readonly tech: LabTech
   ) {}
 
-  run = async (listing: CatalogListing, variables?: Variables) =>
-    await this.lab.run(this.tech.prep(listing, variables));
+  run = async (opName: OpName, variables?: Variables) =>
+    await this.runner.run(this.tech.prep(opName, variables));
 
-  static from = (lab: Lab) => new Chemist(lab, LabTech.build());
+  static build = () => new Chemist(new Runner(), LabTech.build());
 }

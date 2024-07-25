@@ -2,11 +2,11 @@ import * as td from 'testdouble';
 import { afterEach, beforeEach, expect, test } from 'vitest';
 import { Chemist } from '../../src/lab/chemist.js';
 import type { LabTech } from '../../src/lab/lab-tech.js';
-import type { Lab } from '../../src/lab/lab.js';
 import type { Operation } from '../../src/operation/operation.js';
+import type { Runner } from '../../src/vendor/runner/runner.js';
 import { variablesFactory } from '../factory/variables.js';
 
-const lab = td.object<Lab>();
+const runner = td.object<Runner>();
 const tech = td.object<LabTech>();
 const operation = td.object<Operation>();
 const variables = variablesFactory.build();
@@ -20,13 +20,13 @@ afterEach(() => {
 });
 
 test('runs an operation', async () => {
-  const chemist = new Chemist(lab, tech);
+  const chemist = new Chemist(runner, tech);
 
   await chemist.run('synth', variables);
 
-  td.verify(lab.run(operation));
+  td.verify(runner.run(operation));
 });
 
 test('builds a chemist', () => {
-  expect(Chemist.from(lab)).toBeInstanceOf(Chemist);
+  expect(Chemist.build()).toBeInstanceOf(Chemist);
 });
