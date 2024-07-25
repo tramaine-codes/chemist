@@ -1,11 +1,11 @@
 import type { Lab } from '../lab/lab.js';
-import type { Operation } from '../operation/operation.js';
+import type { Process } from '../operation/process.js';
 import { Runner } from '../vendor/runner/runner.js';
 
 export class CliLab implements Lab {
   constructor(private readonly runner: Runner) {}
 
-  run = async (operation: Operation) => await this.runner.run(operation);
+  run = async (operation: Process) => await this.runner.run(operation);
 
   static build = () => new CliLab(new Runner());
 }

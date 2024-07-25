@@ -1,9 +1,9 @@
 import { Listr } from 'listr2';
-import type { Operation } from '../../operation/operation.js';
+import type { Process } from '../../operation/process.js';
 import type { Step } from '../../operation/step.js';
 
 export class Runner {
-  run = async ({ steps }: Operation) => {
+  run = async ({ steps }: Process) => {
     await this.list(steps).run();
   };
 

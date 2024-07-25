@@ -1,6 +1,6 @@
 import { Command } from 'commander';
+import type { Variables } from '../infrastructure/config/variables.js';
 import { Chemist } from '../lab/chemist.js';
-import type { Variables } from '../operation/variables.js';
 import { CliLab } from './cli-lab.js';
 import { Release } from './release.js';
 import { Title, type TitleLogger } from './title.js';

@@ -1,5 +1,5 @@
+import type { Variables } from '../infrastructure/config/variables.js';
 import type { CatalogListing } from '../operation/catalog.js';
-import type { Variables } from '../operation/variables.js';
 import { LabTech } from './lab-tech.js';
 import type { Lab } from './lab.js';
 

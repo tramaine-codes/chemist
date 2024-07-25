@@ -1,4 +1,4 @@
-import type { Variables } from '../../operation/variables.js';
+import type { Variables } from '../../infrastructure/config/variables.js';
 import { Loader } from '../../vendor/loader/loader.js';
 import { Is } from '../../vendor/type/is.js';
 import type { CliSubstance, ConfigSubstance } from './material/substance.js';

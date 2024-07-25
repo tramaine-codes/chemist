@@ -1,5 +1,13 @@
-import type { Step } from './step.js';
+import type { Process } from './process.js';
 
-export interface Operation {
-  readonly steps: readonly Step[];
+export abstract class Operation implements Process {
+  private readonly processes: readonly Process[];
+
+  constructor(...processes: readonly Process[]) {
+    this.processes = processes;
+  }
+
+  get steps() {
+    return this.processes.flatMap((process) => process.steps);
+  }
 }

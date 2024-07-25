@@ -1,5 +1,5 @@
+import type { Variables } from '../infrastructure/config/variables.js';
 import { Catalog, type CatalogListing } from '../operation/catalog.js';
-import type { Variables } from '../operation/variables.js';
 import { Cabinet } from './cabinet/cabinet.js';
 import { Material } from './cabinet/material/material.js';
 import { Mixer } from './cabinet/mixer.js';
