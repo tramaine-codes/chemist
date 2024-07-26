@@ -12,7 +12,7 @@ Chemist is a packager that bundles source code within a standard Node.js project
 
 Ensure the following requirements are met prior to usage:
 
-- Node.js 16 or higher
+- Node.js 18 or higher
 - Git installed
 
 ## Installation
