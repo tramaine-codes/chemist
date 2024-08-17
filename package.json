@@ -10,7 +10,8 @@
   },
   "license": "MIT",
   "engines": {
-    "node": ">=18"
+    "node": ">=18",
+    "npm": ">=10"
   },
   "bin": {
     "chemist": "./lib/cli/cli.js"
