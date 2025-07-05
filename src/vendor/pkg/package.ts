@@ -1,5 +1,5 @@
 import { fileURLToPath } from 'node:url';
-import { packageDirectorySync } from 'pkg-dir';
+import { packageDirectorySync } from 'package-directory';
 import { readPackageUp, readPackageUpSync } from 'read-package-up';
 import { Assert } from '../type/assert.js';
 
