@@ -2,10 +2,10 @@
 
 Chemist is a packager that bundles source code within a standard Node.js project into a compressed file.
 
-![Build Status](https://github.com/tgillus/chemist/actions/workflows/main.yml/badge.svg)
-[![GitHub version](https://img.shields.io/github/package-json/v/tgillus/chemist)](https://github.com/tgillus/chemist#readme)
+![Build Status](https://github.com/tramaine-codes/chemist/actions/workflows/main.yml/badge.svg)
+[![GitHub version](https://img.shields.io/github/package-json/v/tramaine-codes/chemist)](https://github.com/tramaine-codes/chemist#readme)
 [![NPM version](https://img.shields.io/npm/v/@triviumsoftware/chemist)](https://www.npmjs.com/package/@triviumsoftware/chemist)
-[![License](https://img.shields.io/npm/l/@triviumsoftware/chemist)](https://github.com/tgillus/chemist/blob/main/LICENSE)
+[![License](https://img.shields.io/npm/l/@triviumsoftware/chemist)](https://github.com/tramaine-codes/chemist/blob/main/LICENSE)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
 ## Prerequisites
@@ -41,7 +41,7 @@ Chemist looks for a config file named `chemist.config.js` in the project's root 
 export default {
   name: 'chemist',
   git: {
-    url: 'git@github.com:tgillus/chemist.git',
+    url: 'git@github.com:tramaine-codes/chemist.git',
   },
   compression: {
     destination: 'dist',

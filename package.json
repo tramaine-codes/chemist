@@ -6,7 +6,7 @@
   "author": "Tramaine L. Gillus",
   "repository": {
     "type": "git",
-    "url": "git@github.com:tgillus/chemist.git"
+    "url": "git+ssh://git@github.com/tramaine-codes/chemist.git"
   },
   "license": "MIT",
   "engines": {
@@ -14,7 +14,7 @@
     "npm": ">=10"
   },
   "bin": {
-    "chemist": "./lib/cli/cli.js"
+    "chemist": "lib/cli/cli.js"
   },
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",

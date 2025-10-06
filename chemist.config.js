@@ -1,7 +1,7 @@
 export default {
   name: 'chemist',
   git: {
-    url: 'git@github.com:tgillus/chemist.git',
+    url: 'git@github.com:tramaine-codes/chemist.git',
   },
   compression: {
     destination: 'dist',

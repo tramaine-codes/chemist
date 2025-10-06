@@ -137,7 +137,7 @@ Chemist expects a configuration file named `chemist.config.js` in the project ro
 export default {
   name: 'chemist',
   git: {
-    url: 'git@github.com:tgillus/chemist.git',
+    url: 'git@github.com:tramaine-codes/chemist.git',
   },
   compression: {
     destination: 'dist',
