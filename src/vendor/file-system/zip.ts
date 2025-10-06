@@ -4,7 +4,7 @@ import type fs from 'node:fs';
 export class Zip {
   zip = async (
     stream: fs.WriteStream,
-    patterns: readonly string[],
+    patterns: ReadonlyArray<string>,
     cwd: string
   ) => {
     const archive = archiver('zip');

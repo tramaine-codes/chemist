@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import { basename } from 'node:path';
 
 export class FileOperations {
-  rm = async (patterns: readonly string[]) => await deleteAsync(patterns);
+  rm = async (patterns: ReadonlyArray<string>) => await deleteAsync(patterns);
 
   mkdir = async (path: string) => await makeDirectory(path);
 

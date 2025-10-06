@@ -27,10 +27,10 @@ npm install --save-dev @triviumsoftware/chemist
 
 ### Configuration File
 
-Chemist looks for a config file named `chemist.config.cjs` in the project's root directory. The following is an example with all of the configurable settings:
+Chemist looks for a config file named `chemist.config.js` in the project's root directory. The following is an example with all of the configurable settings:
 
 ```javascript
-module.exports = {
+export default {
   name: 'chemist',
   git: {
     url: 'git@github.com:tgillus/chemist.git',

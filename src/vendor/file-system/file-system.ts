@@ -7,7 +7,7 @@ export class FileSystem {
     private readonly compressor: Zip
   ) {}
 
-  rm = async (...patterns: readonly string[]) => {
+  rm = async (...patterns: ReadonlyArray<string>) => {
     await this.operations.rm(patterns);
   };
 
@@ -17,7 +17,7 @@ export class FileSystem {
 
   zip = async (
     destination: string,
-    patterns: readonly string[],
+    patterns: ReadonlyArray<string>,
     cwd: string
   ) => {
     await this.compressor.zip(
