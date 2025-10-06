@@ -6,6 +6,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Chemist is a packager that bundles source code within a standard Node.js project into a compressed file. It clones a fresh copy of the project from Git, builds it, installs production dependencies, and creates a compressed archive.
 
+## Prerequisites
+
+- **Node.js:** Version 20 or higher (specified in `package.json` engines field)
+- **NVM:** The project includes an `.nvmrc` file set to Node 20. Run `nvm use` to automatically switch to the correct version.
+
 ## Development Commands
 
 ### Build & Test

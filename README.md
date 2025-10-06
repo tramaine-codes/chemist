@@ -12,8 +12,16 @@ Chemist is a packager that bundles source code within a standard Node.js project
 
 Ensure the following requirements are met prior to usage:
 
-- Node.js 18 or higher
+- Node.js 20 or higher
 - Git installed
+
+**Using NVM (Node Version Manager):**
+
+If you use [NVM](https://github.com/nvm-sh/nvm), the project includes an `.nvmrc` file. Run the following command in the project root to use the correct Node.js version:
+
+```bash
+nvm use
+```
 
 ## Installation
 
