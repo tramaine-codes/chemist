@@ -148,12 +148,34 @@ export default {
 
 ## TypeScript Configuration
 
+The project uses a modular TypeScript configuration with three files:
+
+### `tsconfig.base.json`
+
+Shared compiler options used by all other configs:
+
 - **Module System:** ES Modules (`"type": "module"` in package.json)
-- **Module Resolution:** Node16 (requires `.js` extensions in imports)
+- **Module Resolution:** NodeNext (requires `.js` extensions in imports)
 - **Target:** ES2020
 - **Strict Mode:** Enabled with enhanced checks (`noUncheckedIndexedAccess`, `noPropertyAccessFromIndexSignature`)
 - **Output:** `lib/` directory (excluded from git)
-- **Source:** `src/` directory
+
+### `tsconfig.json`
+
+Main build configuration:
+
+- Extends `tsconfig.base.json`
+- **Source:** `src/` directory only
+- Used by `npm run build` and `npm run build:ci`
+
+### `tsconfig.typecheck.json`
+
+Type checking configuration:
+
+- Extends `tsconfig.base.json`
+- Adds `"noEmit": true` to skip file generation
+- **Source:** Both `src/` and `test/` directories
+- Used by `npm run typecheck` for comprehensive type checking without emitting files
 
 ## Barrel Exports
 
